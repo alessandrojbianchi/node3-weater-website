@@ -12,8 +12,7 @@ const forecast = (location,callback) => {
          }else if(body.succes === false) {
              callback('Enable to find location. Try another search', undefined)
          } else {
- 
-             callback(body.current.weather_descriptions[0] + '. La temperatura attuale è:' + body.current.temperature +' la temperatura percepita è :' + body.current.feelslike)
+             callback(body.current.weather_descriptions[0] + '. La temperatura attuale è:' + body.current.temperature +' la temperatura percepita è :' + body.current.feelslike + 'degrees out. The umidity is' + body.current.humidity + '%')
  
          }
  
